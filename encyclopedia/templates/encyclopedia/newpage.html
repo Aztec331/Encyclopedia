@@ -1,0 +1,27 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+
+<h1>Form filling for new page</h1>
+
+<form action="{% url 'encyclopedia:newpage' %}" method="POST">
+<!-- here newpage function means the data of this form will be submitted to the
+url known as newpage as action is equal to newpage -->
+    {% csrf_token %}
+    <label>Title:</label>
+    <input type="text" name="title" placeholder="Enter a title">
+    <br>
+    <label>Markdown content:</label>
+    <br>
+    <textarea name="content" cols="5" rows="5" placeholder="Enter content"></textarea>
+    <br>
+    <input class="btn btn-primary" type="submit" value="submit">
+    
+</form>
+
+
+{% endblock %}

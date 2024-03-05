@@ -1,0 +1,26 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+
+<h1>Edit page</h1>
+
+<form action="{% url 'encyclopedia:save_edit' %}" method="POST">
+<!-- here newpage function means the data of this form will be submitted to the
+url known as newpage as action is equal to newpage -->
+    {% csrf_token %}
+    <label>Title:</label>
+    <input type="text" name="title" value="{{title}}">
+    <br>
+    <label>Markdown content:</label>
+    <br>
+    <textarea name="content" >{{content}}</textarea>
+    <br>
+    <input class="btn btn-primary" type="submit" value="Edit">
+    
+</form>
+
+{% endblock %}
