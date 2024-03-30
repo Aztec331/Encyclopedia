@@ -1,3 +1,12 @@
 # CSS
 
-CSS is a language that can be used to add style to an [HTML](/wiki/HTML) page.Why are you giving error man
+
+
+
+
+
+
+CSS is a language that can be used to add style to an [HTML](/wiki/HTML) page.
+
+
+

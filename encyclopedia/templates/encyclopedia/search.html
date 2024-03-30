@@ -6,10 +6,9 @@
 
 {% block body %}
     <h1>All Pages</h1>
-    <h6>Yes all pages</h6>
-
     <ul>
         {% for entry in substringresults %}
+            <!-- below title= entry means ki title ko abhi wali specific entry dena for eg title= CSS -->
             <li><a href="{% url 'encyclopedia:entry' title=entry %}">{{entry}}</a></li>
         {% endfor %}
     </ul>
